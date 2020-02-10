@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900|Open+Sans:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:900|Open+Sans:300,400&display=swap');
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
+//    transition: all .3s linear;
 }
+
+$colorGray: #868686;
+$colorOrange: #ffbb42;
 
 body{
     color: #7b7b7b;
+    font-family: Open Sans;
 }
 
 a{
@@ -20,11 +25,19 @@ li{
 }
 
 input{
-    outline: none;
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    border-radius: 3px;
+        &:active, &:hover, &:focus {
+        outline: 0;
+        outline-offset: 0;
+        border: none;
+        }
 }
 
 
-//////// HEADER ///////
+//////////////   HEADER   /////////////
 
 
 .container{
@@ -42,6 +55,8 @@ input{
     justify-content: space-between;    
     align-items: center;
     margin: 20px 0;    
+    font-family: Lato;
+    font-weight: 400;
 }
 
 .menu{
@@ -55,8 +70,15 @@ input{
 .menu__item{
     display: inline-block;
     vertical-align: top;
-    margin: 0 10px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: $colorGray;
+    transition: .3s linear;
+    &:hover{
+        background-color: $colorOrange;
+        color: #ffffff;
+        border-radius: 3px;
+    }
 }
 
 .header-content{
@@ -64,35 +86,294 @@ input{
     background-color: #709dca;
 }
 
-.intro_inner{
+.intro__inner{
     text-align: center;
     margin: 0; 
     padding-top: 100px;
 }
 
-.title{
-    text-transform: uppercase;        
+.header__title{
+    text-transform: uppercase;  
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 35px;
 }
 
-.header__input{
+.header__subtitle{
+    font-family: Open Sans;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.header__form{
     text-align: center;
 }
 
+.header__input{
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+}
+
+.icon{
+    position:absolute;
+    color: #6e6e6e;
+    top: 13px;
+    left: 14px;
+}
+
+.input__write{
+    height: 46px;
+    padding-left: 40px;
+    width: 280px;
+    color: $colorGray;
+}
+
+.input__btn{
+    height: 46px;
+    width: 210px;
+    text-transform: uppercase;
+    color: $colorGray;
+    margin-bottom: 350px;
+    cursor: pointer;
+    transition: .3s linear;
+    &:hover{
+        background-color: $colorOrange;
+        color: #fff;
+    }
+}
 
 
+////////////   SERVICES   /////////////
 
 
+.section{
+    padding-top: 150px;
+}
+
+.section__header{
+    text-align: center;
+    color: #394b50;
+}
+
+.section__title{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.section__subtitle{
+    font-family: Open Sans;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 80px;
+}
+
+.services{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services__item{
+    margin-bottom: 80px;
+    margin-left: 80px;
+    position: relative;
+}
+
+.services__title{
+    color: #394b50;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.services__text{
+    color: $colorGray;
+    max-width: 420px;
+}
+
+.services__icon{
+    position: absolute;
+    left: -80px;
+    font-size: 50px;
+    top: -4px;
+    transition: .2s linear;
+    &:hover{
+        color: #f6772c;
+    }
+}
 
 
+////////////    ABOUT US   /////////////
 
 
+.section__about{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;    
+}
+
+.about__img{
+//    width: 100%;
+//    max-width: 851px;
+}
+
+.about__content{
+    background-color: $colorOrange;
+    width: 100%;
+    color: #fff;
+    padding-top: 160px;
+    padding-left: 80px;
+    max-height: 623px;
+}
+
+.about__title{
+    margin-bottom: 30px;
+}
+
+.about__text{
+    margin-bottom: 40px;
+    width: 500px;
+}
+
+.about__btn{
+    height: 46px;
+    width: 145px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e7ad48;
+    cursor: pointer;
+    transition: .3s linear;
+    &:hover{
+        background-color: #fff;
+        color: $colorOrange;
+    }
+}
 
 
+////////////    PRICE   /////////////
 
+.section__price{
+    background-color: #e7edf3;
+    padding-bottom: 200px;
+}
 
+.section__price__subtitle{
+    margin-bottom: 70px;
+}
 
+.section__price__cards{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
 
+.card{
+    text-transform: uppercase;
+    position: relative;
+    height: 440px;
+    background-color: #fff;
+    width: 33.333333%;
+    border: 1px solid #ccd5df;    
+    border-radius: 3px;
+    text-align: center;
+    transition: .2s linear;
+    &:hover{
+        transform: scale(1,1.2);
+        background-color: #709dca;
+        color: #fff;
+        border: none;
+    }
+    &:hover .card__price,
+    &:hover .card__dollar
+    {
+        color: #fff; 
+    }
+    &:hover .card__content{
+        transform: scale(1,.84);
+    }
+    &:hover .section__price{
+        background-color: #e7edf3;
+    }
+  
+//    transition: 0.3s;
+//    margin-top: 30px;
+//    &:hover{
+//        padding: 30px 0;
+//        height: 500px;
+//        margin-top: 0;
+//        background-color: #709dca;
+//        color: #fff;
+//    }
+//    &:hover .description{
+//        transition: color .1s;
+//        color: #accff1;
+//    }
+//    &:hover .card__price + .card__dollar{
+//        color: #fff;
+//    }
+}
 
+ 
+
+.card__title{
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-family: Lato;
+    font-weight: 300;
+}
+
+.card__price{
+    font-size: 60px;
+    color: $colorOrange;
+    font-family: Lato;
+    font-weight: 700;    
+}
+
+.card__dollar{
+    font-size: 32px;
+    position: absolute;
+}
+
+.card__month{
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 300;
+    padding-bottom: 35px;
+}
+
+.description{
+    font-size: 13.5px;
+    border-top: 1px solid #e2e9f0;
+    margin: 0 5%;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.price__btn{
+    height: 46px;
+    width: 145px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e7ad48;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .3s linear;
+    &:hover{
+        background-color: #c59134;
+    }
+}
 
 
 
