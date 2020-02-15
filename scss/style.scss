@@ -191,6 +191,7 @@ input{
     color: #394b50;
     text-transform: uppercase;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .services__text{
@@ -219,11 +220,12 @@ input{
     display: -ms-flex;
     display: -o-flex;
     display: flex;    
+    margin-bottom: -5px;
 }
 
 .about__img{
-//    width: 100%;
-//    max-width: 851px;
+    width: 100%;
+    max-width: 849px;
 }
 
 .about__content{
@@ -233,6 +235,7 @@ input{
     padding-top: 160px;
     padding-left: 80px;
     max-height: 623px;
+    min-height: 623px;
 }
 
 .about__title{
@@ -263,7 +266,8 @@ input{
 
 .section__price{
     background-color: #e7edf3;
-    padding-bottom: 200px;
+    min-height: 898px;
+    height: 100%;
 }
 
 .section__price__subtitle{
@@ -287,44 +291,21 @@ input{
     border: 1px solid #ccd5df;    
     border-radius: 3px;
     text-align: center;
-    transition: .2s linear;
+    transition: 0.3s linear;
+    margin-top: 30px;
     &:hover{
-        transform: scale(1,1.2);
+        padding: 30px 0;
+        height: 500px;
+        margin-top: 0;
         background-color: #709dca;
         color: #fff;
-        border: none;
     }
-    &:hover .card__price,
-    &:hover .card__dollar
+    &:hover .card__dollar,
+    &:hover .card__price
     {
         color: #fff; 
     }
-    &:hover .card__content{
-        transform: scale(1,.84);
-    }
-    &:hover .section__price{
-        background-color: #e7edf3;
-    }
-  
-//    transition: 0.3s;
-//    margin-top: 30px;
-//    &:hover{
-//        padding: 30px 0;
-//        height: 500px;
-//        margin-top: 0;
-//        background-color: #709dca;
-//        color: #fff;
-//    }
-//    &:hover .description{
-//        transition: color .1s;
-//        color: #accff1;
-//    }
-//    &:hover .card__price + .card__dollar{
-//        color: #fff;
-//    }
 }
-
- 
 
 .card__title{
     font-size: 25px;
@@ -350,7 +331,7 @@ input{
     font-size: 15px;
     font-family: Lato;
     font-weight: 300;
-    padding-bottom: 35px;
+    padding-bottom: 18px;
 }
 
 .description{
@@ -374,6 +355,180 @@ input{
         background-color: #c59134;
     }
 }
+
+
+////////////    WORKS   /////////////
+
+
+.step__cards{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;    
+    margin-top: 80px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.step{
+    height: 260px;
+    width: 262px;
+}
+
+.step__icon{
+    font-size: 72px;
+    color: #709dca;
+    margin-bottom: 100px;
+}
+
+.step__text{
+    margin-top: 10px;
+}
+
+.work__btn-content{
+    height: 46px;
+    width: 165px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e7ad48;
+    cursor: pointer;
+    transition: .3s linear;
+    margin-top: 139px;
+    &:hover{
+        background-color: #c59134;
+    }
+}
+
+.work__btn{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+
+////////////    CLIENTS   /////////////
+
+
+.section__clients{
+    background-color: #ffc155;
+}
+
+.section__header-clients{
+    color: #fff;
+}
+
+.clients__comments{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.comment{
+    height: 240px;
+    width: 575px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 20px;
+    &:last-child{
+     margin-bottom: 150px;  
+    }
+}
+
+.comment__img{
+    left: 30px;
+    position: absolute;
+    top: 50px
+}
+
+.comment__text{
+    margin: 54px 30px 0 183px;
+    font-family: Open Sans;
+    font-size: 13px;
+}
+
+.commmet__name{
+    color: #f78948;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 40px 30px 0 183px;
+}
+
+.commet__profession{
+    color: #a7b4b9;
+}
+
+
+////////////    NEWSLETTER   /////////////
+
+
+
+.news__input{
+    border: 1px solid #cbcbcb;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    text-align: left;
+}
+
+.news__input-name{
+    width: 300px;
+}
+
+.news__input-mail{
+    width: 380px;
+}
+
+.news__icon{
+    position:absolute;
+    color: #6e6e6e;
+    top: 13px;
+    left: 14px;
+}
+
+.news__input__write{
+    height: 46px;
+    padding-left: 43px;
+    color: $colorGray;
+}
+
+.news__input__btn{
+    height: 46px;
+    width: 210px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 350px;
+    cursor: pointer;
+    transition: .3s linear;
+    background-color: $colorOrange;
+    &:hover{
+        background-color: #e7ad48;
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
